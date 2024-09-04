@@ -1,74 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="./index.css">
-  <title>Bill V2</title>
-</head>
-<body>
-  
-  <div class="header">
-    <div class="headerInvoice">
-      <div class="nameOfInvoice">
-        <h2><span id="nameInvoice">[ Name Invoice]</span></h2>
+    <link rel="stylesheet" href="./index.css" />
+    <title>Bill V2</title>
+  </head>
+  <body>
+
+   
+    <div class="header">
+      <div class="headerInvoice">
+        <div class="nameOfInvoice">
+          <h2><span id="nameInvoice"><var>[ Name Invoice]</var></span></h2>
+        </div>
+        <div class="logoInvoice">
+          <h2>INVOICE</h2>
+        </div>
       </div>
-      <div class="logoInvoice">
-        <h2>INVOICE</h2>
+      <div class="addressInvoice">
+        <p><span id="addressInvoice"><var>[ Address ]</var></span></p>
+        <br />
+        <p><span id="cityInvoice"><var>[ City ]</var></span></p>
       </div>
     </div>
-    <div class="addressInvoice" >
-      <p><span id="addressInvoice">[ Address ]</span></p>
-      <br>
-      <p><span id="cityInvoice">[ City ]</span></p>
-    </div>
-  </div>
 
-  <div class="content">
-    <div class="main01">
-      <p class="headContentMain">Bill To</p>
-      <br>
-      <p><span class="defultText" id="nameBill">[ Name to Bill ]</span></p>
-      <br>
-      <p><span class="defultText" id="addressBill">[ Address to Bill ]</span></p>
-      <br>
-      <p><span class="defultText" id="cityBill">[ City To Bill ]</span></p>
+    <div class="content">
+      <div class="main01">
+        <p class="headContentMain">Bill To</p>
+        <br />
+        <p><span class="defultText" id="nameBill"><var>[ Name to Bill ]</var></span></p>
+        <br />
+        <p>
+          <span class="defultText" id="addressBill"><var>[ Address to Bill ]</var></span>
+        </p>
+        <br />
+        <p><span class="defultText" id="cityBill"><var>[ City To Bill ]</var></span></p>
+      </div>
+      <div class="main02">
+        <p class="headContentMain">Ship To</p>
+        <br />
+        <p><span class="defultText" id="nameShip"><var>[ Name Ship ]</var></span></p>
+        <br />
+        <p><span class="defultText" id="addressShip"><var>[ Address Ship ]</var></span></p>
+        <br />
+        <p><span class="defultText" id="cityShip"><var>[ City Ship ]</var></span></p>
+      </div>
+      <div class="main03">
+        <p class="headContentMain">
+          Invoice # &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<span
+            class="defultText"
+            id="invoiceText"
+          >
+            <var>[ Invoice Text ]</var></span
+          >
+        </p>
+        <p class="headContentMain">
+          Invoice Date &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<span
+            class="defultText"
+            id="invoiceDate"
+          >
+            <var>[ Invoice Date ]</var></span
+          >
+        </p>
+        <p class="headContentMain">
+          P.O.# &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<span
+            class="defultText"
+            id="poNumber"
+          >
+            <var>[P.O. Number]</var></span
+          >
+        </p>
+        <p class="headContentMain">
+          Due Date &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<span
+            class="defultText"
+            id="dueDate"
+          >
+            <var>[ Due Date ]</var></span
+          >
+        </p>
+      </div>
     </div>
-    <div class="main02">
-      <p class="headContentMain">Ship To</p>
-      <br>
-      <p><span class="defultText" id="nameShip">[ Name Ship ]</span></p>
-      <br>
-      <p><span class="defultText" id="addressShip">[ Address Ship ]</span></p>
-      <br>
-      <p><span class="defultText" id="cityShip">[ City Ship ]</span></p>
-    </div>
-    <div class="main03">
-      <p class="headContentMain">Invoice # &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<span class="defultText" id="invoiceText"> [ Invoice Text ]</span></p>
-      <p class="headContentMain">Invoice Date &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<span class="defultText" id="invoiceDate"> [ Invoice Date ]</span></p>
-      <p class="headContentMain">P.O.# &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<span class="defultText" id="poNumber"> [P.O. Number]</span></p>
-      <p class="headContentMain">Due Date &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<span class="defultText" id="dueDate"> [ Due Date ]</span></p>
-    </div>
-  </div>
-  
-  <table>
-    <thead>
-      <tr>
-        <th>QTY</th>
-        <th>DESCRIPTION</th>
-        <th>UNIT PRICE</th>
-        <th>AMOUNT</th>
-      </tr>
-    </thead>
-    <tbody id="itemsToPort">
-      <!-- <tr>
+
+    <table>
+      <thead>
+        <tr>
+          <th>QTY</th>
+          <th>DESCRIPTION</th>
+          <th>UNIT PRICE</th>
+          <th>AMOUNT</th>
+        </tr>
+      </thead>
+      <tbody id="itemsToPort">
+        <!-- <tr>
         <td>1</td>
         <td class="textLeft">Front and rear brake cables</td>
         <td class="numberRight">100.00</td>
@@ -99,31 +131,37 @@
         <td style="font-weight: bold; font-size: 20px;" colspan="3" class="totalMain">TOTAL</td>
         <td class="totalAmount">$204.75</td>
       </tr> -->
-    </tbody>
-  </table>
-  <div id="loading" style="display: none;">
-    <p>Loading...</p>
-  </div>
-  
-  <div class="signature">
-    <div class="sigImg">
-      <img src="./img/SIGNATURES-NEW-LOGO-01-03.png" alt="">
+      </tbody>
+    </table>
+    <div id="loading" style="display: none">
+      <p>Loading...</p>
     </div>
-  </div>
 
-  <div class="footer">
-    <div class="footerText01">
-      <p style="font-weight: bold;">Term & Conditions</p>
-      <p>Payment is due within 15 days</p>
+    <div class="signature">
+      <div class="sigImg">
+        <img src="./img/SIGNATURES-NEW-LOGO-01-03.png" alt="" />
+      </div>
     </div>
-    <div class="footerText02">
-      <p>Name of Bank</p>
-      <p>Account number: 1234567890</p>
-      <p>Routing: 098765432</p>
+
+    <div class="mainfooter01">
+      <div class="footer">
+        <div class="footerText01">
+          <p style="font-weight: bold">Term & Conditions</p>
+          <p>Payment is due within 15 days</p>
+        </div>
+        <div class="footerText02">
+          <p>Name of Bank</p>
+          <p>Account number: 1234567890</p>
+          <p>Routing: 098765432</p>
+        </div>
+      </div>
+      <div class="mylogo">
+        <img src="./img/Group 2.png" alt="">
+      </div>
     </div>
-  </div>
+    
 
-
-  <script src="./index.js"></script>
-</body>
+    <script src="./data.js"></script>
+    <script src="./index.js"></script>
+  </body>
 </html>

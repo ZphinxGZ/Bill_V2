@@ -1,64 +1,18 @@
 console.log("Hello World!!");
-// Data
-let dataStore = [
-  {
-    nameInvoice: "John Smith",
-    addressInvoice: "4490 Oak Drive",
-    cityInvoice: "Albany,NY 12210",
-  },
-];
 
-let dataCustomer = [
-  {
-    // bill to
-    nameCustomerBill: "Jessie M Home",
-    addressBillTo: "4312 Wood Road",
-    cityBillTo: "New York, NY 10031",
-    // ship to
-    nameCustomerShip: "Jessie M Home",
-    addressShipTo: "2019 Redbud Drive",
-    cityShipTo: "New York, NY 10011",
-  },
-];
-
-// InvoiceData
-let invoiceData = [
-  {
-    invoiceText: "INT-001",
-    invoiceDate: "11/02/2019",
-    poNumber: "2412/2019",
-    dueDate: "26/02/2019",
-  },
-];
-
-// Items
-let items = [
-  {
-    itemName: "Front and rear brake cables",
-    itemPrice: 100.0,
-    itemQuantity: 1,
-  },
-  {
-    itemName: "New set of pedal arms",
-    itemPrice: 25.0,
-    itemQuantity: 2,
-  },
-  {
-    itemName: "Labor 3hrs",
-    itemPrice: 15.0,
-    itemQuantity: 3,
-  },
-];
 
 //แสดงผล
 
 document.addEventListener("DOMContentLoaded", () => {
-  const loadingDiv = document.getElementById("loading");
+  // const loadingDiv = document.getElementById("loading");
   let tbody = document.getElementById("itemsToPort");
   let subtotal = 0;
 
-  loadingDiv.style.display = 'flex';
+  // loadingDiv.style.display = 'flex';
 
+
+  
+  //แสดงผลตาราง
   items.forEach((item) => {
     let row = document.createElement("tr");
     row.innerHTML = `
@@ -72,9 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
     tbody.appendChild(row);
     subtotal += item.itemPrice * item.itemQuantity;
 
-    loadingDiv.style.display = 'none';
+    // loadingDiv.style.display = 'none';
   });
-
   // รวมราคาสินค้าแต่ไม่รวมภาษี
   let subtotalRow = document.createElement("tr");
   subtotalRow.innerHTML = `
@@ -82,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <td class="numberRight">${subtotal.toFixed(2)}</td>
             `;
   tbody.appendChild(subtotalRow);
-  // ราคาภาษีที่ต้องจ่าย
+  // ราคาภาษีที่ต้องจ่าย   Taxs
   let salesTax = subtotal * 0.05;
   let salesTaxRow = document.createElement("tr");
   salesTaxRow.innerHTML = `
@@ -98,12 +51,16 @@ document.addEventListener("DOMContentLoaded", () => {
             <td class="totalAmount">$${total.toFixed(2)}</td>
         `;
   tbody.appendChild(totalRow);
+
+
+
+
+
   // Store
   document.getElementById("nameInvoice").innerHTML = dataStore[0].nameInvoice;
   document.getElementById("addressInvoice").innerHTML =
     dataStore[0].addressInvoice;
   document.getElementById("cityInvoice").innerHTML = dataStore[0].cityInvoice;
-
   // Customer Billto
   let nameOfBillTo = document.getElementById("nameBill");
   let addressBillTo = document.getElementById("addressBill");

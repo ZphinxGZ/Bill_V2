@@ -11,8 +11,17 @@ body{
     padding-left: 50px;
     padding-right: 50px;
 }
-
-
+.mainfooter01{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mylogo img {
+    width: 150px;
+}
+var{
+    color: red;
+}
 .addressInvoice{
     display: flex;
     flex-direction: column;
