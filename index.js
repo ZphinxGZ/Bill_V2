@@ -4,14 +4,9 @@ console.log("Hello World!!");
 //แสดงผล
 
 document.addEventListener("DOMContentLoaded", () => {
-  // const loadingDiv = document.getElementById("loading");
   let tbody = document.getElementById("itemsToPort");
   let subtotal = 0;
 
-  // loadingDiv.style.display = 'flex';
-
-
-  
   //แสดงผลตาราง
   items.forEach((item) => {
     let row = document.createElement("tr");
@@ -25,8 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
     tbody.appendChild(row);
     subtotal += item.itemPrice * item.itemQuantity;
-
-    // loadingDiv.style.display = 'none';
   });
   // รวมราคาสินค้าแต่ไม่รวมภาษี
   let subtotalRow = document.createElement("tr");
@@ -51,10 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
             <td class="totalAmount">$${total.toFixed(2)}</td>
         `;
   tbody.appendChild(totalRow);
-
-
-
-
 
   // Store
   document.getElementById("nameInvoice").innerHTML = dataStore[0].nameInvoice;
